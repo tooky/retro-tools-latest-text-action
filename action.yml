@@ -1,0 +1,8 @@
+name: 'Latest Retro'
+description: 'Get the latest retro text'
+outputs:
+  text: # text of the latest retro
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
