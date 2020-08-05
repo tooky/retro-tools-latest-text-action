@@ -8,5 +8,5 @@ content="${content//$'\r'/'%0D'}"
 echo $content
 }
 
-text=$(retro latest)
+text=$(echo $PATH)
 echo "::set-output name=text::$(escape_output "${text}")"
