@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: get latest retro text
     steps:
-    - name: Get text
-      id: get_retro_text
-      uses: tooky/retro-tools-latest-text-action@main
-    - name: Get the text
-      run: echo "${{ steps.get_retro_text.outputs.text }}"
+      - uses: actions/checkout@v2
+      - name: Get text
+        id: get_retro_text
+        uses: tooky/retro-tools-latest-text-action@main
+      - name: Print text
+        run: echo "${{ steps.get_retro_text.outputs.text }}"
