@@ -7,6 +7,6 @@ jobs:
     steps:
     - name: Get text
       id: get_retro_text
-      uses: tooky/retro-tools-latest-text-action@v0.0.1
+      uses: tooky/retro-tools-latest-text-action@v0.0.2
     - name: Get the text
       run: echo "${{ steps.get_retro_text.outputs.text }}"
