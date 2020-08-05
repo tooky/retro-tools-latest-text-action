@@ -8,5 +8,5 @@ content="${content//$'\r'/'%0D'}"
 echo $content
 }
 
-current_env=$(env)
-echo "::set-output name=text::$(escape_output "${current_env}")"
+text=$(ls -l)
+echo "::set-output name=text::$(escape_output "${text}")"
