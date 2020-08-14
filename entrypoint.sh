@@ -1,13 +1,5 @@
-#!/bin/sh -l
-
-escape_output() {
-content="${1}"
-content="${content//'%'/'%25'}"
-content="${content//$'\n'/'%0A'}"
-content="${content//$'\r'/'%0D'}"
-echo "$content"
-}
+#!/bin/bash
 
 cd $GITHUB_WORKSPACE
-text="$(retro latest)"
-echo "::set-output name=text::$(escape_output "${text}")"
+text="$(retro latest | script/github_actions_escape)"
+echo "::set-output name=text::${text}"

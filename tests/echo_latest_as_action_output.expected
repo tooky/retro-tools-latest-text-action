@@ -1,4 +1,4 @@
 cp -R ../../../doc .
 run-action $(pwd)
 pwd
-::set-output name=text::# 2020-08-05 ## Who - @tooky  ## What happened  - Emerged from nothing  ## Insights  ## Actions
+::set-output name=text::# 2020-08-05%0A## Who%0A- @tooky%0A%0A## What happened%0A%0A- Emerged from nothing%0A%0A## Insights%0A%0A## Actions
