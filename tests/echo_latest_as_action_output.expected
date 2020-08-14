@@ -1,0 +1,4 @@
+cp -R ../../../doc .
+run-action $(pwd)
+pwd
+::set-output name=text::# 2020-08-05 ## Who - @tooky  ## What happened  - Emerged from nothing  ## Insights  ## Actions
