@@ -1,11 +1,11 @@
 TESTS:=$(wildcard tests/*.sh)
 BUILDDIR:=tmp
 
-.docker-build: Dockerfile entrypoint.sh script/*
+.docker-build: Dockerfile entrypoint.sh github_actions_escape
 	docker build -t retro-tools-action-test .
 	@touch $@
 
-check: $(TESTS:tests/%.sh=$(BUILDDIR)/tests/%.diff)
+check: $(TESTS:tests/%.sh=$(BUILDDIR)/tests/%.diff) build
 	@echo SUCCESS
 
 $(BUILDDIR)/tests/%.diff: $(BUILDDIR)/tests/%.output tests/%.expected
