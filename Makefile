@@ -1,7 +1,7 @@
 TESTS:=$(wildcard tests/*.sh)
 BUILDDIR:=tmp
 
-.docker-build: Dockerfile entrypoint.sh
+.docker-build: Dockerfile entrypoint.sh script/*
 	docker build -t retro-tools-action-test .
 	@touch $@
 

@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "$(docker run -it --rm -v "${1}":/code -e GITHUB_WORKSPACE=/code retro-tools-latest-action-test)"
+docker run -it --rm --workdir /github/workspace -v "${1}":/github/workspace -e GITHUB_WORKSPACE=/github/workspace retro-tools-latest-action-test
